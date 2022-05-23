@@ -5,36 +5,33 @@
     <title>takahashi tikusan</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <script src="https://kit.fontawesome.com/*******.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <header id="header">
-      <h1 class="site-title">高橋畜産株式会社</h1>
-      <nav>
-        <ul>
-          <li><%= link_to "トップページ", root_path, class:"nav-link ml-2" %>
-          <li><%= link_to "会社概要", homes_path, class:"nav-link ml-2" %>
-          <li><%= link_to "働きたい人", about_path, class:"nav-link ml-2" %>
-          <li>
-            <!--<a href="https://www.instagram.com/" target="_blank">-->
-              <!--<img class="icon" src="./img/icon-instagram.png" alt="インスタグラム">-->
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
 
+    <header>
+            <div class="container-fluid">
+                <div class="col-3 text-right">
+                      <ul class="navbar-nav d-flex flex-wrap">
+                        <li><h3><%= link_to "トップページ", root_path, class:"nav-link ml-2" %></h3></li>
+                        <li><h3><%= link_to "会社概要", homes_path, class:"nav-link ml-2" %></h3></li>
+                        <li><h3><%= link_to "働きたい人", about_path, class:"nav-link ml-2" %></h3></li>
+                      </ul>
+                  </div>
+                </div>
+                  <div class="col-6 left">
+                      <h1>高橋畜産株式会社</h1>
+                  </div>
+            </div>
+      </header>
 
-  <body>
-    <%= yield %>
+      <%= yield %>
+
+      <footer class="text-center my-3">
+      <p class="footer-text">高橋畜産株式会社</p>
+      </footer>
+
   </body>
-
-  <footer>
-    <p class="footer-text">高橋畜産株式会社</p>
-  </footer>
-
 </html>
