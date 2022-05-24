@@ -11,27 +11,27 @@
   </head>
   <body>
 
-    <header>
-            <div class="container-fluid">
-                <div class="col-3 text-right">
-                      <ul class="navbar-nav d-flex flex-wrap">
-                        <li><h3><%= link_to "トップページ", root_path, class:"nav-link ml-2" %></h3></li>
-                        <li><h3><%= link_to "会社概要", homes_path, class:"nav-link ml-2" %></h3></li>
-                        <li><h3><%= link_to "働きたい人", about_path, class:"nav-link ml-2" %></h3></li>
-                      </ul>
-                  </div>
-                </div>
-                  <div class="col-6 left">
-                      <h1>高橋畜産株式会社</h1>
-                  </div>
-            </div>
-      </header>
+    <header id="header">
+       <!--<h1 class="site-title">高橋畜産株式会社</a></h1>-->
+      <div class="col-6 left">
+        <h1>高橋畜産株式会社</h1>
+      </div>
+
+      <nav>
+        <ul>
+          <li><h3><%= link_to "トップページ", root_path, class:"nav-link ml-2" %></h3></li>
+          <li><h3><%= link_to "会社概要", homes_path, class:"nav-link ml-2" %></h3></li>
+          <li><h3><%= link_to "働きたい人", about_path, class:"nav-link ml-2" %></h3></li>
+        </ul>
+
+    </header>
 
       <%= yield %>
 
-      <footer class="text-center my-3">
-      <p class="footer-text">高橋畜産株式会社</p>
-      </footer>
+    <footer id="footer">
+      <p>高橋畜産株式会社</p>
+    </footer>
 
   </body>
 </html>
+
